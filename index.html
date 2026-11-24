@@ -1,21 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Heart</title>
-<style>
-* { box-sizing: border-box; }
-body { margin: 0; min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; overflow: hidden; background: #fff0f4; }
-svg { width: 86vmin; height: 86vmin; overflow: visible; animation: beat 1.2s infinite ease-in-out; filter: drop-shadow(0 12px 25px #ff47754d); }
-@keyframes beat { 0%, 100% { transform: scale(.88); } 15% { transform: scale(1.06); } 30% { transform: scale(.94); } 45% { transform: scale(1.08); } 65% { transform: scale(.88); } }
-@media (prefers-reduced-motion: reduce) { svg { animation: none; } }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#181612">
+  <meta name="description" content="0522 · A Little Piece of Us">
+  <title>0522 · 星光下的我們</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./story.js" defer></script>
 </head>
 <body>
-<svg viewBox="0 0 100 100" role="img" aria-label="跳動的愛心">
-<defs><linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff7096"/><stop offset="1" stop-color="#e91e4d"/></linearGradient></defs>
-<path fill="url(#pink)" d="M50 91 C42 83 3 57 3 30 C3 5 34 -3 50 20 C66 -3 97 5 97 30 C97 57 58 83 50 91Z"/>
-</svg>
+  <main>
+    <header class="cover">
+      <div class="cover-art"><img src="./media/starlight.webp" alt="暖金燈串下，兩個人並肩站著的線描插畫" fetchpriority="high"></div>
+      <div class="cover-copy">
+        <p class="eyebrow">A LITTLE PIECE OF US</p>
+        <h1><i class="cover-date">0522</i> <small class="cover-year">2026</small><span>星光下的我們</span></h1>
+        <p class="cover-note">這份記憶，只留給你。</p>
+        <a class="button" href="#letter">打開這封信</a>
+      </div>
+      <p class="cover-caption" lang="en">A PLACE ONLY WE KNOW</p>
+    </header>
+
+    <section class="letter wrap" id="letter" aria-labelledby="letter-title">
+      <div class="letter-paper">
+        <p class="eyebrow" lang="en">FOR YOUR EYES ONLY</p>
+        <h2 id="letter-title">給你的一封信</h2>
+        <div class="letter-body">
+          <p>阿銘：</p>
+          <p>我想把一些和你在一起的日子，好好收起來。像去日月潭、在苗栗露營、一起去聽演唱會，還有那些平常相處的小片刻。每次想起這些日子，我最先想到的，總是旁邊有你。</p>
+          <p>所以做了這張小小的卡。哪天你想我的時候，就打開它。看看照片，聽聽我的聲音，就當我在你旁邊，陪你坐一會兒。</p>
+          <p>不管走到哪裡，都希望有一天可以跟你分享。也希望以後，還有很多地方可以跟你一起去。</p>
+          <p>生日快樂。</p>
+        </div>
+        <p class="signature">1209</p>
+      </div>
+    </section>
+
+    <section class="memories wrap" aria-labelledby="memories-title">
+      <h2 id="memories-title">我們一起度過的時光</h2>
+      <div class="memory-grid">
+        <figure>
+          <div class="photo"><img src="./media/lake.webp" alt="兩人在窗邊相擁" width="1000" height="1333" loading="lazy"></div>
+          <figcaption><h3>日月潭</h3><p>風景很美，能跟你一起看更好。</p></figcaption>
+        </figure>
+        <figure>
+          <div class="photo"><img src="./media/camp.webp" alt="兩人在露營燈串下合照" width="1000" height="1333" loading="lazy"></div>
+          <figcaption><h3>苗栗露營</h3><p>很喜歡那一次，跟你一起待在外面的日子。</p></figcaption>
+        </figure>
+        <figure>
+          <div class="photo photo-concert"><img src="./media/concert-seats.webp" alt="兩人在演唱會看台上的自拍合照" width="1152" height="1536" loading="lazy"></div>
+          <figcaption><h3>演唱會</h3><p>想起那天聽見的歌，也想起在我旁邊的你。</p></figcaption>
+        </figure>
+        <figure>
+          <div class="photo"><img src="./media/everyday.webp" alt="兩人一起刷牙時拍的鏡中合照" width="1000" height="1333" loading="lazy"></div>
+          <figcaption><h3>日常</h3><p>和你一起度過的普通日子，我也都想記得。</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="voice wrap" aria-labelledby="voice-title">
+      <div class="voice-card">
+        <h2 id="voice-title">想我的時候，<br class="phone-break">就聽我說。</h2>
+        <p id="voice-placeholder">生日語音待加入</p>
+        <audio id="voice-recording" aria-label="生日語音" controls preload="metadata" hidden></audio>
+        <details id="transcript" hidden><summary>閱讀語音文字</summary><p></p></details>
+      </div>
+    </section>
+
+    <footer class="ending wrap">
+      <p class="ending-en" lang="en">To be continued.</p>
+      <p>這只是我們已經走過的其中一段。</p>
+      <p class="eyebrow" lang="en">0522 · OUR STORY CONTINUES</p>
+    </footer>
+  </main>
 </body>
 </html>
